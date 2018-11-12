@@ -84,7 +84,7 @@ app.wsgi_app = SharedDataMiddleware(app.wsgi_app, {
 SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))		# Necesario para poder localizar los archivos de datos.
 
 # Inicialización del acceso a la BBDD:
-mariadb_connection = mariadb.connect(user='root', password='Junio333', database='soteria', use_unicode=True, charset='utf8')
+mariadb_connection = mariadb.connect(user='root', password='XXXXXXXXXX', database='soteria', use_unicode=True, charset='utf8')
 cursor = mariadb_connection.cursor()
 mariadb_connection.autocommit = True	# Permite que se refresquen los datos en cada consulta y evitar los problemas de la memoria caché.
 
