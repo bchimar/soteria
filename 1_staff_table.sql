@@ -1,0 +1,25 @@
+INSERT INTO STAFF
+(user, name, surname, status, email) 
+values
+('blachimar', 'Blas', 'Chica Martos', 'A', 'blachimar@soteria.es'),
+('silsanmel', 'Silvia', 'Santos Melvar', 'A', 'silsanmel@soteria.es'),
+('davgonvaz', 'David', 'González Vázquez', 'A', 'davgonvaz@soteria.es'),
+('carsevove', 'Carmen', 'Sevilla Ovejita', 'A', 'carsevove@soteria.es'),
+('artgardel', 'Arturo', 'García Delgado', 'A', 'artgardel@soteria.es'),
+('marestrom', 'Maria', 'Estepa Romero', 'A', 'marestrom@soteria.es'),
+('joscarval', 'José', 'Carrión Vallejo', 'V', 'joscarval@soteria.es'),
+('lucvelrub', 'Lucía', 'Vélez Rubio', 'A', 'lucvelrub@soteria.es'),
+('abegonher', 'Abel', 'Hernández González', 'B', 'abegonher@soteria.es'),
+('analopgar', 'Ana', 'López Garrido', 'V', 'analopgar@soteria.es'),
+('pedcanmal', 'Pedro', 'Cano Maldonado', 'A', 'pedcanmal@soteria.es'),
+('josgommar', 'José Manuel', 'Gómez Martín', 'A', 'josgommar@soteria.es'),
+('angigonel', 'Ángel', 'Ígor Ñellero', 'A', 'angigonel@soteria.es'),
+('danjimcue', 'Daniel', 'Jiménez Cuenca', 'A', 'danjimcue@soteria.es'),
+('juamarmor', 'Juan', 'Marchal Mora', 'A', 'juamarmor@soteria.es'),
+('aderosmon', 'Adela', 'Rosado Montero', 'D', 'aderosmon@soteria.es'),
+('framinest', 'Francisco Javier', 'Miñambres Estero', 'A', 'framinest@soteria.es'),
+('rafnadpar', 'Rafael', 'Nadal Parera', 'A', 'rafnadpar@soteria.es'),
+('mantencar', 'Manuel', 'Tenorio Carrasco', 'A', 'mantencar@soteria.es'),
+('mikzucsav', 'Mike', 'Zuckerberg Saverin', 'A', 'mikzucsav@soteria.es'),
+('serverguz', 'Sergio', 'Verano Guzmán', 'B', 'serverguz@soteria.es'),
+('leocalsot', 'Leopoldo', 'Calvo Sotelo', 'D', 'leocalsot@soteria.es');
