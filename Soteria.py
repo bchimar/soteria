@@ -59,7 +59,7 @@ sys.setdefaultencoding("utf-8")				# Se trabaja por defecto con codificación de 
 # CONFIGURACION DE LA APLICACION Flask: #
 #---------------------------------------#
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '>aJkFe340cFbApItW592.3fjGlDeY<'
+app.config['SECRET_KEY'] = 'YOUR_SECRET_KEY'
 app.config['SESSION_COOKIE_SECURE'] = True	# Configura el SECURE FLAG => se asegura que solo se envían cookies mediante HTTPS!
 app.config.from_object('config')
 
