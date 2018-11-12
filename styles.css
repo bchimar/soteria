@@ -1,0 +1,526 @@
+/*
+#############################################################
+#                     CUD - MARÍN                           # 
+#                       MGSTICS                             # 
+#                      2017/2018                            # 
+#               TRABAJO DE FIN DE MÁSTER                    # 
+#   DISEÑO E IMPLEMENTACIÓN DE UNA PLATAFORMA WEB PARA      # 
+#  LA GESTIÓN DE INCIDENTES DE SEGURIDAD DE LA INFORMACIÓN  # 
+#                ALUMNO: BLAS CHICA MARTOS.                 # 
+#############################################################
+#					HOJA DE ESTILOS							#
+#############################################################
+*/
+
+html,body {
+    background: darkgrey;
+	height: 100%;
+}
+
+/*
+body {
+	visibility:hidden;
+}
+*/
+
+a:link {	
+	text-decoration: none;	/* Se evita que se visualicen los enlaces con el color azul y el subrayado clásicos. */
+	color: Black;
+	font-weight: bold;
+} 
+
+.banner{
+    background: MidnightBlue;
+    font-size: 3.5ex;
+    font-weight: bold;
+	text-align: center;
+	background-image: url("../img/Azul_Cobalto.png");
+    padding: 25px 3px 20px 63px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+#logo{
+	width: 10%;
+	text-align: left;
+	margin-left: -40px;
+	margin-top: -22px;
+}
+
+#titulo {
+	width: 80%;
+	margin-top: 10px;
+	margin-left: 20px;
+	color:White;
+	font-size: 2ex;
+}
+
+#zona_login {
+	width: 7%;
+	margin-top: -25px;
+	margin-left: 86%;
+	border-color: LightGrey;
+	border-left: 8px solid #55EE55;
+	border-right: 8px solid #55EE55;
+	font-size: 1.5ex;
+	background: #226622;
+	color: White;
+	font-weight: bold;
+}
+
+#zona_logout {
+	width: 8%;
+	margin-top: -20px;
+	margin-left: 93%;
+	font-size: 1.5ex;
+}
+
+.contenedor{
+    width: 90%; /*90%;*/
+	height: 80%;
+    margin: 0px;
+    background: #F7FAF7;
+    color: Black;
+    padding: 20px 15px 50px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.clear {
+	height: 1%;
+}
+	
+.pie{
+    width: 90%;
+	height: 100%;
+    margin: 0px;
+    background: #030303;
+    padding: 3px 3px 20px 63px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.8);
+    color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#pie_texto{
+	margin-left: -70px;
+	margin-top: 3px;
+}
+
+
+#menu_lateral {
+  width:12%;
+  float:left;
+  color: Black;
+  font-weight: bold;
+  margin-top: -3px;
+  margin-left: -40px;
+  text-align: left;
+}
+
+#menu_lateral menu table{
+	color: DarkGreen;
+    font-weight: bold;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#menu_lateral table{
+	padding: 0px 0px 5px 23px;
+	margin-top: 12px;
+	margin-bottom: 6px;
+    margin-left: -75px;
+	text-align: left;
+}
+
+#menu_lateral table tr {
+	height: 40px;
+}
+
+#menu_lateral table tr td:first-child{
+	width: 5px;
+}
+
+#menu_lateral ul li a{
+  color: Black;
+  text-decoration:none;
+}
+
+.ventanatrabajo {
+  width: 86%;/*width:86%;*/
+  float:right;
+  margin-top: -28px;
+}
+
+
+#pestanas {
+	width: auto;
+    font-size: 2.25ex;
+    font-weight: bold;
+}
+
+
+#pestanas ul{
+    margin-left: -40px;    
+}
+
+
+#pestanas li{
+	width: 115px;
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    margin: 0px 2px -2px -0px;
+    background: darkgrey;
+	color: blue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid DarkSlateGray;
+    border-bottom: dimgray;
+    padding: 0px 20px 0px 20px;
+}
+
+#pestanas a:link{
+    text-decoration: none;
+    color: black;
+}
+
+#contenidopestanas{
+    clear: both;  
+    background: dimgray;   
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border: 2px solid DarkSlateGray;
+    width: 100em;
+}
+
+#contenidopestanas div{
+	padding: 20px 0px 20px 20px;
+	overflow-x:auto;
+	overflow-y: scroll;
+	height: 34em;
+    width: 70em;
+}
+
+
+#pestanas #pestana1, #cpestana1{
+	background: #FFFFFF;
+	color: black;
+}
+
+#pestanas #pestana2, #cpestana2{
+	background: #FFFFFF;	/*#F1F1F1;*/
+	color: black;
+}
+
+#pestanas #pestana3, #cpestana3{
+	background: #FFFFFF;
+	color: black;
+}
+
+#pestanas #pestana4, #cpestana4{
+	background: #FFFFFF;	/*#F1F1F1;*/
+	color: black;
+}
+
+#pestanas #pestana5, #cpestana5{
+	background: #FFFFFF;
+	color: black;
+}
+
+#pestanas #pestana6, #cpestana6{
+	background: #FFFFFF;	/*#F1F1F1;*/
+	color: black;
+	font-weight: bold;
+}
+
+#pestanas #pestana7, #cpestana7{
+	background: #FFFFFF;	/*#F1F1F1;*/
+	color: black;
+	font-weight: bold;
+}
+
+#cpestana6 table{
+	width: 75%;
+	background: #FAFAFA;	/*#EAEAEF;*/
+	color: Black;
+	font-weight: bold;
+}
+
+#clock {
+	width: 52%;
+	background: #DDDDDD;
+	color: Black;
+	font-weight: bold;
+	font-size: 3ex;
+	text-align: center;
+	margin-left: 40px;
+	margin-top: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid DarkBlue;
+    border-bottom: 2px solid DarkBlue;
+}
+
+#cpestana1, #cpestana4 {
+	text-align: center;
+}
+
+#cpestana1 table {
+	width: 2600px;
+	border: 2px solid black;
+	text-align: left;
+}
+
+#cpestana4 table {
+	width: 600px;
+	border: 2px solid black;
+	text-align: left;
+	margin-left: 15%;
+}
+
+#cpestana1 table th, #cpestana2 table th, #cpestana4 table th {
+	background: #D1D1D1;
+	width: 130px;
+}
+
+#cpestana1 #odd_row, #cpestana2 #odd_row, #cpestana4 table th {
+	width: 130px;
+	background: #EEEEEE;
+	color: Black;
+	border-bottom: 1px solid #333333;
+}
+
+#cpestana1 #even_row, #cpestana2 #even_row, #cpestana4 #even_row {
+	width: 130px;
+	background: #F7F7F7;
+	color: Black;
+	border-bottom: 1px solid #333333;
+}
+
+#cpestana1 #odd_row:hover, #cpestana2 #odd_row:hover, #cpestana4 #odd_row:hover {
+	background: #EEEEFF;
+	color: DarkBlue;
+}
+
+#cpestana1 #even_row:hover, #cpestana2 #even_row:hover, #cpestana4 #even_row:hover {
+	background: #EEFFEE;
+	color: #003200;
+}
+
+#cpestana1 h2 {
+	display: inline-block;
+	line-height: 30px;
+	height: 32px;
+	width: 250px;
+	background-color: #4444CC;
+	color: #FFFFFF;
+	border-left: 10px solid #00FFFF;
+	border-right: 10px solid #00FFFF;
+	font-size: 3ex;
+	text-align: center;
+}
+
+#cpestana1 h3 {
+	width: 25%;
+	height: 4%;
+	background: #222288;
+	margin-left: 35%;
+	margin-top: 0%;
+	color: White;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	border-color: LightGrey;
+	border-left: 8px solid #7777FF;
+	border-right: 8px solid #7777FF;
+}
+
+#cpestana1 #table_pm {
+	width: auto;
+	height: 100px;
+	overflow: auto;
+	border: none;
+	font-weight: normal;
+}
+
+#cpestana1 #table_pm tr td {
+	border-bottom: 1px solid grey;
+}
+
+#cpestana1 #update_incident {
+	display: inline-block;
+    padding: 5px 10px;
+	border-radius: 6px;
+    text-align: center;
+	margin-top: -25px;
+	margin-left: 120px;
+	float: left;
+	background-color: #222266;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+	box-shadow: 0 5px #999;
+}
+
+#cpestana1 #update_incident:hover {
+	background-color: White;
+	color: DarkBlue;
+	text-decoration: underline;
+}
+
+#cpestana1 #update_incident:active {
+	background-color: #CC6666;
+	text-decoration: none;
+	color: White;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+#cpestana1 form closed {
+	width: 90px;
+	float: left;
+	margin-left: 120px;
+	margin-top: -20px;
+	background-color: #DDDDDD;
+	color: DarkRed;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 6px;
+	border-style: solid;
+	border-width: 2px;
+}
+
+#cpestana1 #new_doc {
+	position: relative;
+	z-index: 100;
+	width: 36%;
+	height: 13px;
+	float: right;
+	margin-right: 29px;
+	margin-top: -37px;
+	background-color: #444499;
+	color: White;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#cpestana1 h4 {
+	position: relative;
+	z-index: 100;
+	justify-content: center;
+	align-items: center;
+	width: 36%;
+	height: 24px;
+	background-color: #222288;
+	color: #FFFFFF;
+	border-left: 8px solid #00AAFF;
+	border-right: 8px solid #00AAFF;
+	font-size: 3ex;
+	text-align: center;
+	margin-left: 28%;
+	margin-top: 15%;
+}
+
+#cpestana1 h5 {
+	display: inline-block;
+	line-height: 30px;
+	height: 32px;
+	background-color: #CC4444;
+	color: #FFFFFF;
+	border-left: 8px solid #FF0000;
+	border-right: 8px solid #FF0000;
+	font-size: 3ex;
+	text-align: center;
+	margin-top: 5%;
+}
+
+
+#cpestana1 #new_incident {
+	margin-left: 830px;
+	margin-top: -500px;
+	text-align: center;
+	font-weight: bold;
+	width: 150px;
+	border-radius: 6px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #888888;
+	float;
+}
+
+#cpestana3 h1, #cpestana2 h1, #cpestana4 h1, #cpestana6 h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 86%;
+	height: 5%;
+	background: #222288;
+	margin-left: 7%;
+	margin-top: 0%;
+	color: White;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	border-color: LightGrey;
+	border-left: 8px solid #7777FF;
+	border-right: 8px solid #7777FF;
+}
+
+#cpestana2 h1 {
+	width: 32%;
+	margin-left: 16%;
+	color: Yellow;
+	border-left: 10px solid #7777FF;
+	border-right: 10px solid #7777FF;
+}
+
+#cpestana4 h1 {
+	width: 46%;
+	margin-left: 11%;
+	color: Yellow;
+	border-left: 10px solid #7777FF;
+	border-right: 10px solid #7777FF;
+}
+
+#cpestana6 h1 {
+	width: 70%;
+	margin-left: 16%;
+	color: Yellow;
+	border-left: 10px solid #7777FF;
+	border-right: 10px solid #7777FF;
+}
+
+#cpestana3 h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15%;
+	height: 5%;
+	background: #DDDDDD;
+	margin-left: 35%;
+	margin-top: -1%;
+	color: Black;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	border-color: LightGrey;
+	border-left: 8px solid #888888;
+	border-right: 8px solid #888888;
+}
+
+#cpestana3 h3 {
+	color: #2222DD;
+}
+
+#cpestana5 canvas{
+	width: 60%;
+	height: 40%;
+	border: 2px solid #FF0000;
+}
