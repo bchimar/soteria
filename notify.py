@@ -104,7 +104,7 @@ smtp.connect('smtp-mail.outlook.com',587)	# El servidor de Outlook funciona OK (
 smtp.ehlo()
 smtp.starttls()
 smtp.ehlo()
-smtp.login("bchimar@outlook.es", "MGSTICS2017TFM")
+smtp.login("bchimar@outlook.es", "YOUR_PASS")
 smtp.sendmail("bchimar@outlook.es", accountable_email, mime_message.as_string())
 smtp.close()
 

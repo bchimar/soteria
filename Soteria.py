@@ -59,7 +59,7 @@ sys.setdefaultencoding("utf-8")				# Se trabaja por defecto con codificación de 
 # CONFIGURACION DE LA APLICACION Flask: #
 #---------------------------------------#
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'YOUR_SECRET_KEY'
+app.config['SECRET_KEY'] = '>aJkFe340cFbApItW592.3fjGlDeY<'
 app.config['SESSION_COOKIE_SECURE'] = True	# Configura el SECURE FLAG => se asegura que solo se envían cookies mediante HTTPS!
 app.config.from_object('config')
 
@@ -84,7 +84,7 @@ app.wsgi_app = SharedDataMiddleware(app.wsgi_app, {
 SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))		# Necesario para poder localizar los archivos de datos.
 
 # Inicialización del acceso a la BBDD:
-mariadb_connection = mariadb.connect(user='root', password='XXXXXXXXXX', database='soteria', use_unicode=True, charset='utf8')
+mariadb_connection = mariadb.connect(user='root', password='Junio333', database='soteria', use_unicode=True, charset='utf8')
 cursor = mariadb_connection.cursor()
 mariadb_connection.autocommit = True	# Permite que se refresquen los datos en cada consulta y evitar los problemas de la memoria caché.
 
@@ -483,6 +483,20 @@ def index():
 			knowledge = get_knowledge_type(cursor,request.form.get('type'))	# Se obtiene la nueva tabla de Conocimiento maquetada HTML.
 			
 			go_tab = 'pestana6'							# Se selecciona la pestaña correspondiente.
+			
+		# elif form_id.find('knowledge_notified') > -1:	# Procesado de la selección de incidencias notificadas.
+		
+			# session['id_incid'] = request.form.get('id_incid')		# Se almacena en el espacio de variables de la sesión => accesible desde siguientes peticiones POST.
+			
+			# try:	# Se registra el ID de la incidencia seleccionada por el usuario:
+				# file = open (SCRIPT_PATH+'/current_id_incid.dat','w')
+			# except IOError:
+				# print 'Archivo '+SCRIPT_PATH+'/current_id_incid.dat no iniciado!'
+			# else:	
+				# file.write(session['id_incid'])
+				# file.close()
+			
+			# return redirect(url_for('manage_incident'))		# Se pasa al interfaz de gestión de incidencias.
 			
 		elif form_id.find('launch_query') > -1:	# Procesado de la consulta compleja de incidencias.
 					
@@ -1014,6 +1028,8 @@ def index():
 			type = request.form.get('type')
 			area = request.form.get('area')
 			csirt = request.form.get('csirt')
+			if not csirt:	# Si está deshabilitado desde el interfaz, no se lee nada!
+				csirt = 'N'	
 
 			C = request.form.getlist('Conf')
 			I = request.form.getlist('Inte')
@@ -1081,6 +1097,8 @@ def index():
 					mariadb_connection.commit()			# Se hacen efectivos los cambios en la BBDD.
 					# Por último, se notifica a los integrantes del equipo:
 					# No se hace necesario ya -> notify.py  lo recoge de manera automática y lo notifica!
+				else:
+					id_csirt = 0
 					
 				# Se compone el campo pm_info en el caso de que se haya clasificado la incidencia mediante el campo type:
 				pm_info_t = ''

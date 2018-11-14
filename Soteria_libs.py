@@ -794,7 +794,7 @@ def get_stats(option,cursor,lapse,year,start_date,stop_date):
 					max = data[i]
 					month_max = i
 
-			ave = global_t / i
+			ave = global_t / i -1
 			
 			month_min = labels[month_min]
 			month_max = labels[month_max]
@@ -1609,7 +1609,7 @@ def email_notify(email,subject,text):
 	smtp.ehlo()
 	smtp.starttls()
 	smtp.ehlo()
-	smtp.login("bchimar@outlook.es", "MGSTICS2017TFM")
+	smtp.login("bchimar@outlook.es", "YOUR_PASS")
 	smtp.sendmail("bchimar@outlook.es", accountable_email, mime_message.as_string())
 	smtp.close()
 
