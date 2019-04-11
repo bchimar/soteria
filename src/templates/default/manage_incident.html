@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<script type="text/javascript" src="js/cambiarPestanna.js"></script>
+		<script type="text/javascript" src="js/clock.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="js/sweetalert.min.js"></script>
+		<script type="text/javascript">
+			function init(){
+				document.getElementById("start_date").disabled=true;
+				document.getElementById("stop_date").disabled=true;
+				document.getElementById("year").disabled=true;
+				
+				{{ js_code_init }}
+				
+				document.getElementsByTagName("body")[0].style.visibility = "visible";
+			}
+			window.history.forward();
+			function noBack(){ window.history.forward(); }
+		</script>
+		<title>Gestión de Incidentes de Seguridad de la Información</title>
+		
+	</head>
+	
+    <body onload="javascript:cambiarPestanna(pestanas,pestana1); javascript:startTime(); noBack(); init();" onpageshow="if (event.persisted) noBack();" onunload="" />
+	  
+	    <div class="banner" style="width:95%; height:1%;">
+			<div id="logo">
+			    <img src="img/CUD_Marin_Solo_Escudo.png" width=35% height=35% align=left>
+			</div>
+			<div id="titulo">
+				PLATAFORMA SOTERIA: GESTIÓN DE INCIDENTES DE SEGURIDAD DE LA INFORMACIÓN
+			</div>
+			<div id="zona_login">
+				{{ current_user }}
+			</div>
+			<div id="zona_logout">
+				<a href="{{ url_for('logout') }}"><img src="img/LOGOUT.png" width="60"></a>
+			</div>
+			
+		</div>
+		
+		<div class="clear"></div>
+	  
+        <div class="contenedor" style="width:95%; height:75%;">	
+
+			<div id="menu_lateral" style="width:15%; height:38%;">
+				<fieldset>
+					<legend style="text-align: center;"><img src="img/surfing_files.ico" width=20%>Navegación</legend>
+					
+					<table style="width:auto">
+						<tr>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana1);'><img src="img/Warning.ico" width=20% align=right></a>
+							</td>
+							<td style="width:50%">
+								<a href='javascript:cambiarPestanna(pestanas,pestana1);'>Incidentes</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana2);'><img src="img/CSIRT.png" width=20% align=right></a>
+							</td>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana2);'>CSIRT</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana3);'><img src="img/ENS.png" width=35% align=right></a>
+							</td>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana3);'>ENS</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana4);'><img src="img/RRHH_icono.png" width=25% align=right></a>
+							</td>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana4);'>Personal</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana5);'><img src="img/Stats.ico" width=25% align=right></a>
+							</td>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana5);'>An&aacute;lisis</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana6);'><img src="img/Knowledge.ico" width=20% align=right></a>
+							</td>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana6);'>Conocimiento</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana7);'><img src="img/information.jpg" width=25% align=right></a>
+							</td>
+							<td>
+								<a href='javascript:cambiarPestanna(pestanas,pestana7);'>Información</a>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			
+				<div style="margin-top: 20px; margin-left: 15px;"><img src="img/Soteria_titulo.png"></div>
+			
+				<div id="clock"></div>
+				
+				<div style="margin-top: 40px; margin-left: -2px;"><a href="{{ url_for('banner') }}"><img src="img/home.png" width=20% height=7%></a></div>
+				<div style="margin-top: -58px; margin-left: 70px;"><img src="img/copyright.png" width=40%></div>
+			</div>
+						
+			<div class="ventanatrabajo">
+			
+				<div id="pestanas">
+					<ul id=lista>
+						<li id="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'><img src="img/Warning.ico" width=17.5% height=17.5%">&#32;&#32;&#32;Incidentes</a></li>
+						<li id="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);'><img src="img/CSIRT.png" width=12% height=12%>&#32;&#32;&#32;CSIRT</a></li>
+						<li id="pestana3"><a href='javascript:cambiarPestanna(pestanas,pestana3);'><img src="img/ENS.png" width=39% height=14%>&#32;&#32;&#32;ENS</a></li>
+						<li id="pestana4"><a href='javascript:cambiarPestanna(pestanas,pestana4);'><img src="img/RRHH_icono.png" width=22% height=14%>&#32;&#32;&#32;Personal</a></li>
+						<li id="pestana5"><a href='javascript:cambiarPestanna(pestanas,pestana5);'><img src="img/Stats.ico" width=24% height=24%>&#32;&#32;&#32;An&aacute;lisis</a></li>
+						<li id="pestana6"><a href='javascript:cambiarPestanna(pestanas,pestana6);'><img src="img/Knowledge.ico" width=11.5% height=11.5%>&#32;&#32;&#32;Conocimiento</a></li>
+						<li id="pestana7"><a href='javascript:cambiarPestanna(pestanas,pestana7);'><img src="img/information.jpg" width=17.5% height=17.5%>&#32;&#32;&#32;Información</a></li>
+					</ul>
+				</div>
+					 
+				<div id="contenidopestanas" style="width:99%;">
+					<div id="cpestana1">
+					
+						{% if warning_message != '' %}
+							<script type="text/javascript">
+								{{ warning_message }}
+							</script>							
+						{% endif %}
+						
+						<form method="post" action="">
+						
+							 <fieldset style="width: 31%; height: 84%; background: #FFFFFF; font-size: 16px; margin-left: -5px; margin-bottom: 50px; margin-top: 15px; text-align: left;">
+								<legend style="font-size: 20px; font-weight: bold;">Datos básicos</legend>
+								ID:  {{ id_incid }}<br/><br/>
+								<p style="color: #AA2222; font-weight: bold; position: absolute; top: 19%; left: 38%;">Escalar: <input type="checkbox" class="lift_it_up" name="lift_it_up" id="lift_it_up" value="lift_it_up"></p>
+								Originador:  {{ originator }}<br/><br/>
+								Clasificación ENS:  {{ type }}<br/><br/>
+								Área:  {{ area }}<br/><br/>
+								<label for="accountable">Responsable:</label>
+								<select name="accountable" id="accountable">
+								{% for i in range(len_names_list) %}
+									<option name="accountable" value="{{ names_list[i] }}" {% if names_list[i] == accountable %} selected="selected" {% endif %}>{{ names_list[i] }}</option>
+								{% endfor %}
+								</select><br/><br/>								
+
+								CSIRT:	 {{ csirt }} &#13;&#13;  CSIRT ID:  {{ id_csirt }}<br/><br/>
+								Fecha detección:  {{ detect_date }}<br/><br/>
+								Fecha notificación:  {{ notify_date }}<br/><br/>
+								
+								<label for="severity">Severidad:</label>
+								<select name="severity" id="severity">
+									<option name="severity" value="B" {% if severity == 'B' %} selected="selected" {% endif %}>Baja</option>
+									<option name="severity" value="M" {% if severity == 'M' %} selected="selected" {% endif %}>Media</option>
+									<option name="severity" value="A" {% if severity == 'A' %} selected="selected" {% endif %}>Alta</option>
+									<option name="severity" value="C" {% if severity == 'C' %} selected="selected" {% endif %}>Crítica</option>
+								</select><br/><br/>
+								
+								Dimensiones de seguridad:<br/>
+								{% if dimensions.find('C') > -1 %}
+									<input type="checkbox" class="case" name="Conf" id="Conf" value="C" checked> C&#13;&#13;
+								{% else %}
+									<input type="checkbox" class="case" name="Conf" id="Conf" value=""> C&#13;&#13;
+								{% endif %}
+								{% if dimensions.find('I') > -1 %}
+									<input type="checkbox" class="case" name="Inte" id="Inte" value="I" checked> I&#13;&#13;
+								{% else %}
+									<input type="checkbox" class="case" name="Inte" id="Inte" value=""> I&#13;&#13;
+								{% endif %}
+								{% if dimensions.find('D') > -1 %}
+									<input type="checkbox" class="case" name="Avai" id="Avai" value="D" checked> D&#13;&#13;
+								{% else %}
+									<input type="checkbox" class="case" name="Avai" id="Avai" value=""> D&#13;&#13;
+								{% endif %}
+								{% if dimensions.find('A') > -1 %}
+									<input type="checkbox" class="case" name="Auth" id="Auth" value="A" checked> A&#13;&#13;
+								{% else %}
+									<input type="checkbox" class="case" name="Auth" id="Auth" value=""> A&#13;&#13;
+								{% endif %}
+								{% if dimensions.find('T') > -1 %}
+									<input type="checkbox" class="case" name="Trac" id="Trac" value="T" checked> T
+								{% else %}
+									<input type="checkbox" class="case" name="Trac" id="Trac" value=""> T
+								{% endif %}<br/><br/>
+								
+								<label for="status">Estado:</label>
+								<select name="status" id="status">
+									<option name="status" value="A" {% if status == 'A' %} selected="selected" {% endif %}>Abierta</option>
+									<option name="status" value="U" {% if status == 'U' %} selected="selected" {% endif %}>Cuarentena</option>
+									<option name="status" value="C" {% if status == 'C' %} selected="selected" {% endif %}>Cerrada</option>
+								</select>{% if status == 'C' %}&emsp;Fecha de cierre: {{ closing_date }}{% endif %}<br/><br/>
+								
+								{% if false_p.find('S') > -1 %}
+									<input type="radio" name="falses" id="false_p" value="false_p" checked>  Falso positivo&#13;&#13;
+									<input type="radio" name="falses" id="false_n" value="false_n">  Falso negativo
+								{% elif false_n.find('S') > -1 %}
+									<input type="radio" name="falses" id="false_p" value="false_p">  Falso positivo&#13;&#13;
+									<input type="radio" name="falses" id="false_n" value="false_n" checked>  Falso negativo
+								{% else %}
+									<input type="radio" name="falses" id="false_p" value="false_p">  Falso positivo&#13;&#13;
+									<input type="radio" name="falses" id="false_n" value="false_n">  Falso negativo
+								{% endif %}
+							 </fieldset>
+
+							 <fieldset style="width: 62%; height: 99%; background: #FFFFFF; font-size: 16px; font-weight: bold; margin-top: -560px; margin-left: 380px; text-align: left;">
+								<legend style="font-size: 20px;">Información ampliada</legend>
+								<p style="margin-top: 1px;">Descripción: {{ description }}</p>
+								<fieldset style="width: 98%; height: 133px; margin-left: -8px; margin-top: 14px; overflow-y: auto;">
+									{{ pm_extended }}
+								</fieldset>
+								<fieldset style="width: 98%; height: 133px; margin-left: -8px; margin-top: 2px;">
+									<legend style="font-size: 16px;">Detalles</legend>
+									<textarea name="details" id="details" style="width: 100%; height: 88%; overflow : auto; resize: none; border-style: none; border-left: 6px solid grey;">{{ details }}</textarea>
+								</fieldset>
+								<fieldset style="width: 98%; height: 133px; margin-left: -8px; margin-top: 2px;">
+									<legend style="font-size: 16px;">Informes</legend>
+									<textarea readonly id="reports" style="width: 100%; height: 88%; overflow : auto; resize: none; border-style: none; border-left: 6px solid grey;">{{ reports }}</textarea>
+								</fieldset>
+
+							</fieldset>
+
+							{% if status == 'C' %}
+								<closed>Cerrada</closed>
+							{% else %}
+								<textarea type="url" name="new_doc" id="new_doc" value="Añadir URL" onclick=this.value="">¿Nuevo informe? => inserte URL:&emsp;</textarea>
+								<input type="submit" name="update_incident" id="update_incident" value="Actualizar">
+								<input type="hidden" name="form_id" value="update_incident">
+							{% endif %}
+							
+						</form>						
+					</div>
+					<div id="cpestana2">
+						<h1>GESTIÓN DE EQUIPOS DE RESPUESTA</h1>
+						{{ table_and_edit_CSIRT }}
+						<script type="text/javascript">
+							$( '#csirt_id' ).change(function() {
+								var team_list_index = {{ team_list_index }};
+								var csirt_id = document.getElementById('csirt_id').value;
+								
+								document.getElementById('staff_1').value = team_list_index[csirt_id][1];
+								document.getElementById('staff_2').value = team_list_index[csirt_id][2];
+								document.getElementById('staff_3').value = team_list_index[csirt_id][3];
+							}).change();
+						</script>
+					</div>
+					<div id="cpestana3">
+						{{ ens }}
+					</div>
+					<div id="cpestana4">
+						<h1>GESTIÓN DE PERSONAL RESPONSABLE DE SEGURIDAD</h1>
+						{{ table_STAFF }}
+						{{ edit_STAFF }}
+					</div>
+					<div id="cpestana5">
+						{{ stats_option }}
+					</div>
+					<div id="cpestana6">
+						{{ knowledge }}
+					</div>
+					<div id="cpestana7">
+						{{ info }}
+					</div>
+				</div>
+			
+			</div>
+
+			
+        </div>
+		
+		<div class="clear"></div>
+		
+		<div class="pie" style="width:95%; height:4px;">
+			<div id="pie_texto">
+				MÁSTER EN GESTIÓN Y DIRECCIÓN DE SISTEMAS Y TECNOLOGÍAS DE LA INFORMACIÓN Y LAS COMUNICACIONES Y DE SEGURIDAD DE LA INFORMACIÓN. TRABAJO FIN DE MÁSTER.
+			</div>
+		</div>
+		
+	</body>
+</html>

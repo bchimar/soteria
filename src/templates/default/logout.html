@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		window.history.forward();
+		function noBack(){ window.history.forward(); }
+	</script>
+	<title>Bye!</title>
+</head>
+<style>
+	body {
+		background-color: #334455;
+	}
+
+	div.main {
+		position: absolute;
+		width: 380px;
+		height: 100px;
+		left: 35%;
+		top: 25%;
+		/*margin-top: 50%;
+		margin-left: 50%;*/
+		border-radius: 5px;
+		background-color: #6688AA;
+		padding: 20px;
+		text-align: center;
+	}
+	
+	div.main h3 {
+		width: 375px;
+		margin-top: 10px;
+		color: DarkBlue;
+		font-size: 22px;
+		font-weight: bold;
+		background: #DDDDDD;
+	}
+	div.main h3:hover {
+		background-color: Blue;
+		color: White;
+	}
+
+	div.main h4 {
+		width: 375px;
+		margin-top: -40px;
+		color: DarkRed;
+		font-size: 22px;
+		font-weight: bold;
+		background: #FAFAFA;
+	}
+	div.main h4:hover {
+		background-color: DarkRed;
+		color: #FAFAFA;
+	}
+	
+	div.main a {
+		margin-top: -20px;
+	}
+		
+</style>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+	<div class="main">
+		<h3>Gracias por utilizar Soteria!</h3><br/>
+		<h4>Por seguridad, cierre el navegador o borre los datos de navegación.</h4>
+	</div>
+</body>
+</html>
